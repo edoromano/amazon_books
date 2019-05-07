@@ -10,37 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_07_013433) do
+ActiveRecord::Schema.define(version: 2019_05_06_154912) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "books", force: :cascade do |t|
-    t.text "isbn"
+    t.bigint "genre_id"
+    t.string "isbn"
     t.decimal "average_rating"
-    t.text "author"
-    t.text "binding"
-    t.text "manufacturer"
+    t.string "author"
+    t.string "binding"
+    t.string "manufacturer"
     t.decimal "number_of_items"
     t.decimal "number_of_pages"
-    t.text "product_group"
+    t.string "product_group"
     t.date "publication_date"
-    t.text "studio"
-    t.text "title"
+    t.string "studio"
+    t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "genre_id"
     t.index ["genre_id"], name: "index_books_on_genre_id"
   end
 
   create_table "genres", force: :cascade do |t|
-    t.text "name"
-    t.bigint "book_id"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["book_id"], name: "index_genres_on_book_id"
   end
 
-  add_foreign_key "books", "genres"
-  add_foreign_key "genres", "books"
 end
