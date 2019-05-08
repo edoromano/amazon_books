@@ -8,5 +8,4 @@ class BooksController < ApplicationController
     book = Book.search(params)
     render json: book
   end
-
 end

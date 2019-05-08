@@ -3,6 +3,14 @@ require 'open-uri'
 class Genre < ApplicationRecord
   has_many :books
 
+  def index
+    Genre.all.limit(10)
+  end
+
+  def find(params={})
+    Book.filter_by_genre_id(params[:id])
+  end
+
   def self.fetch
     genres = []
     (1..5).each do |page|

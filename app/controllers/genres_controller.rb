@@ -1,11 +1,10 @@
 class GenresController < ApplicationController
   def index
-    genres = Genre.all
-    render json: genres
+    render json: Genre.all
   end
 
   def show
-    genre = Genre.find(params[:id])
-    render json: genre
+    books =  Book.filter_by_genre_id(params[:id])
+    render json: books
   end
 end

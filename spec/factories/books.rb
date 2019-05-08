@@ -11,6 +11,6 @@ FactoryBot.define do
     publication_date { Faker::Date.between_except(1.year.ago, 1.year.from_now, Date.today)  }
     studio { 'studio' }
     title { Faker::Book.title }
-    genre { Genre.find(rand(1..1200)) }
+    association :genre, factory: :genre, name: Faker::Book.genre
   end
 end
