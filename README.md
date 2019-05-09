@@ -53,6 +53,8 @@ sample response:
   }
 ]
 ```
+
+```
 GET
 /book/:id
 ```
@@ -63,20 +65,20 @@ sample reponse:
 ```
 {
   "id": 1,
-  "genre_id": 873,
-  "isbn": "029-98-3967",
-  "average_rating": "15.0",
-  "author": "Dr. Van Nikolaus",
-  "binding": "binding",
-  "manufacturer": "manufacturer",
-  "number_of_items": "100.20302745916",
-  "number_of_pages": "841.331690313728",
-  "product_group": "book",
-  "publication_date": "2019-01-06",
-  "studio": "studio",
-  "title": "The Monkey's Raincoat",
-  "created_at": "2019-05-07T07:10:36.437Z",
-  "updated_at": "2019-05-07T07:10:36.437Z"
+    "genre_id": 873,
+    "isbn": "029-98-3967",
+    "average_rating": "15.0",
+    "author": "Dr. Van Nikolaus",
+    "binding": "binding",
+    "manufacturer": "manufacturer",
+    "number_of_items": "100.20302745916",
+    "number_of_pages": "841.331690313728",
+    "product_group": "book",
+    "publication_date": "2019-01-06",
+    "studio": "studio",
+    "title": "The Monkey's Raincoat",
+    "created_at": "2019-05-07T07:10:36.437Z",
+    "updated_at": "2019-05-07T07:10:36.437Z"
 }
 ```
 
@@ -112,6 +114,7 @@ sample reponse:
 GET
 /genres/:id/books
 ```
+
 This endpoint will display the information of the books
 related to a genre
 sample reponse:
